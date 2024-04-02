@@ -1,0 +1,18 @@
+<h1>{{'student table' |uppercase}}</h1>
+<h3>{{'XYZ School' |lowercase}}</h3>
+<h4>Mark Percentage of Students</h4>
+<h4>{{'98.0926384' |number: '4.2-4'}}</h4>
+<p>{{0.75 |percent}}</p>
+<p>{{'Hello, Welcome' |slice:6}}</p>
+<!--Student Table Details-->
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.name | studentTable:student.gender }}</td>
+      <td>{{ student.gender }}</td>
+    </tr>
+  </table>
+  
